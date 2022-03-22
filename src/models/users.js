@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize")
 const sequelize = require("../helpers/sequelize")
+const Comments = require("./comments")
 const Phones = require("./phones")
 
 
@@ -32,5 +33,6 @@ const Users = sequelize.define("users", {
 })
 
 Users.hasOne(Phones)
+Users.hasOne(Comments)
 
 module.exports = Users
