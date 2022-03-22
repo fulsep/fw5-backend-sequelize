@@ -29,7 +29,35 @@ exports.getAllTransactions = async (req, res) => {
   }
 }
 
-// exports.getTransaction = async (req, res) => {}
+exports.getTransaction = async (req, res) => {
+  try {
+    const {
+      id
+    } = req.params
+
+    const result = await Transactions.findByPk(id)
+
+    if (result) {
+      return res.send({
+        success: true,
+        message: "Transaction found!",
+        results: result
+      })
+    } else {
+      return res.send({
+        success: false,
+        message: "Transaction not found!",
+      })
+    }
+
+  } catch (err) {
+    console.error(err)
+    return res.status(500).send({
+      success: false,
+      message: "Error"
+    })
+  }
+}
 
 exports.createTransaction = async (req, res) => {
   try {
