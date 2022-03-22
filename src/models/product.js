@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize")
 const sequelize = require("../helpers/sequelize")
-// const Category = require("./category.js")
+const ProductImage = require("./productImage")
 
 const Product = sequelize.define("products", {
   name: {
@@ -35,6 +35,6 @@ const Product = sequelize.define("products", {
   }
 })
 
-// Product.hasOne(Category)
+Product.hasMany(ProductImage)
 
 module.exports = Product
