@@ -13,7 +13,7 @@ const Product = sequelize.define("products", {
   },
   description: {
     type: Sequelize.TEXT,
-    allowNull: true,
+    allowNull:true,
   },
   stock: {
     type: Sequelize.INTEGER,

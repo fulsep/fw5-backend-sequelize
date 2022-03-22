@@ -15,6 +15,6 @@ app.use("/", require("./routes"))
 app.use("/uploads", express.static("uploads"))
 
 app.listen(PORT, ()=> {
-    console.log(`App listening on port ${PORT}`)
-    sequelize.sync()
+  console.log(`App listening on port ${PORT}`)
+  sequelize.sync()
 })
