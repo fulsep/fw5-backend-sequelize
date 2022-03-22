@@ -8,5 +8,6 @@ routes.use("/customers", require("./customers"))
 routes.use("/transactions", require("./transactions"))
 routes.use("/blogImages", require("./blogImages"))
 routes.use("/product", require("./product"))
+routes.use("/blogCategory", require("./blogCategory"))
 
 module.exports = routes
